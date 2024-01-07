@@ -16,13 +16,14 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../routes/home/HomePage'
 
 function App() {
-  
+
   return (
     <>
       <HashRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/new' element={<HomePage />} />
+          <Route path='*' element={<p>Not Found</p>} />
         </Routes>
       </HashRouter>
     </>
