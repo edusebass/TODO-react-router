@@ -12,8 +12,10 @@ import { TodoForm } from '../../components/TodoForm';
 import { CreateTodoButton } from '../../components/CreateTodoButton';
 import { Modal } from '../../components/Modal';
 import { ChangeAlert } from '../../components/ChangeAlert';
+import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
+  const navigate = useNavigate()
   const { state, stateUpdaters } = useTodos();
 
   const {
@@ -22,12 +24,12 @@ function HomePage() {
     searchedTodos,
     totalTodos,
     completedTodos,
-    openModal,
+    // openModal,
     searchValue,
   } = state;
 
   const {
-    setOpenModal,
+    // setOpenModal,
     addTodo,
     completeTodo,
     deleteTodo,
@@ -63,15 +65,15 @@ function HomePage() {
       >
         {todo => (
           <TodoItem
-            key={todo.text}
+            key={todo.id}
             text={todo.text}
             completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
+            onComplete={() => completeTodo(todo.id)}
+            onDelete={() => deleteTodo(todo.id)}
           />
         )}
       </TodoList>
-
+{/* 
       {!!openModal && (
         <Modal>
           <TodoForm
@@ -79,10 +81,11 @@ function HomePage() {
             setOpenModal={setOpenModal}
           />
         </Modal>
-      )}
+      )} */}
 
       <CreateTodoButton
-        setOpenModal={setOpenModal}
+        // setOpenModal={setOpenModal}
+        onClick={() => navigate('/new')}
       />
 
       <ChangeAlert

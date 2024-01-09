@@ -14,6 +14,7 @@ import { Modal } from '../components/Modal';
 import { ChangeAlert } from '../components/ChangeAlert';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../routes/home/HomePage'
+import NewTodoPage from '../routes/new/NewTodoPage'
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/new' element={<HomePage />} />
+          <Route path='/new' element={<NewTodoPage />} />
           <Route path='*' element={<p>Not Found</p>} />
         </Routes>
       </HashRouter>

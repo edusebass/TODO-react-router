@@ -6,4 +6,4 @@ function NewTodoPage (){
     )
 }
 
-export {NewTodoPage}
+export default NewTodoPage
