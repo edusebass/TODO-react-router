@@ -8,7 +8,6 @@ import { TodoItem } from '../../components/TodoItem';
 import { TodosError } from '../../components/TodosError';
 import { TodosLoading } from '../../components/TodosLoading';
 import { EmptyTodos } from '../../components/EmptyTodos';
-import { TodoForm } from '../../components/TodoForm';
 import { CreateTodoButton } from '../../components/CreateTodoButton';
 import { Modal } from '../../components/Modal';
 import { ChangeAlert } from '../../components/ChangeAlert';
@@ -68,6 +67,7 @@ function HomePage() {
             key={todo.id}
             text={todo.text}
             completed={todo.completed}
+            onEdit={() => navigate('/edit/' +  todo.id)}
             onComplete={() => completeTodo(todo.id)}
             onDelete={() => deleteTodo(todo.id)}
           />

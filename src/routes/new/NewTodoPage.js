@@ -1,7 +1,13 @@
+import { TodoForm } from '../../components/TodoForm';
+
 function NewTodoPage (){
     return (
         <>
-        edit
+            <TodoForm
+                label="Escribe tu nuevo TODO"
+                submitText = "Añadir"
+                submitEvent = { () => console.log("llamar a add todo")}
+            />
         </>
     )
 }
