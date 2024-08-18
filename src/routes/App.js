@@ -12,16 +12,16 @@ import { TodoForm } from '../components/TodoForm';
 import { CreateTodoButton } from '../components/CreateTodoButton';
 import { Modal } from '../components/Modal';
 import { ChangeAlert } from '../components/ChangeAlert';
-import { HashRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../routes/home/HomePage'
 import NewTodoPage from '../routes/new/NewTodoPage'
 import { EditTodoPage } from './edit/EditTodoPage';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-
+  
   return (
     <>
-      <HashRouter>
+      <HashRouter> 
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/new' element={<NewTodoPage />} />

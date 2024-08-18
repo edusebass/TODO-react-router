@@ -1,12 +1,17 @@
 import { TodoForm } from '../../components/TodoForm';
+import { useTodos } from '../useTodos';
+
 
 function NewTodoPage (){
+    const {stateUpdaters} = useTodos()
+    const {addTodo} = stateUpdaters;
+
     return (
         <>
             <TodoForm
                 label="Escribe tu nuevo TODO"
                 submitText = "Añadir"
-                submitEvent = { () => console.log("llamar a add todo")}
+                submitEvent = { (text) => addTodo(text)}
             />
         </>
     )

@@ -1,11 +1,8 @@
 import React from 'react';
 import { TodoIcon } from './';
 
-function EditIcon({ completed, onComplete }) {
+function EditIcon({ onEdit}) {
 
-    const onEdit = ((e) => {
-        console.log("MIJIN")
-    })
   return (
     <TodoIcon
       type="edit"
